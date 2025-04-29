@@ -15,9 +15,12 @@ public class Nodo<T>{
         return this.contenido;
     }
 
+    public void setSiguienteNodo(Nodo<T> nuevoSiguienteNodo){
+        this.siguienteNodo=nuevoSiguienteNodo;
+    }
 
-    
-
-
+    public Nodo<T> getSiguienteNodo(){
+        return this.siguienteNodo;
+    }
 
 }
