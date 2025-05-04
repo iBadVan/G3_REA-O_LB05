@@ -1,6 +1,8 @@
 package Actividad;
 
-public class GestorDeTareas {
+public class GestorDeTareas <T> {
+    private Nodo<T> cabeza;
+
     
-    
+
 }
