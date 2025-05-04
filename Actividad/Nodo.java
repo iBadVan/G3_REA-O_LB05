@@ -1,8 +1,8 @@
 package Actividad;
 
 public class Nodo<T>{
-    public T contenido;
-    public Nodo<T> siguienteNodo;  
+    private T contenido;
+    private Nodo<T> siguienteNodo;  
 
     public Nodo( T cont, Nodo<T> siguienteNodo){
         this.contenido=cont;
