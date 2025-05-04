@@ -55,6 +55,14 @@ public class GestorDeTareas <T> {
         return false;
     }
 
+    public void imprimirTareas() {
+        Nodo<T> nodoRecorriendo = cabeza;
+        while (nodoRecorriendo != null) {
+            System.out.println(nodoRecorriendo.getContenido()); 
+            nodoRecorriendo = nodoRecorriendo.getSiguienteNodo();
+        }
+    }
+
 
 
 
