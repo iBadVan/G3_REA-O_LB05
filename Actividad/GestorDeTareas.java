@@ -35,6 +35,7 @@ public class GestorDeTareas <T> {
         Nodo <T> nodoRecorriendo=cabeza;
         while (nodoRecorriendo.getSiguienteNodo()!=null) {
             if (nodoRecorriendo.getSiguienteNodo().getContenido().equals(tarea)){
+                //peunteamos el nodo al siguiente del siguiente xd
                 nodoRecorriendo.setSiguienteNodo(nodoRecorriendo.getSiguienteNodo().getSiguienteNodo());
                 return true;
             }
@@ -42,6 +43,8 @@ public class GestorDeTareas <T> {
         }
         return false;       
     }
+
+
 
 
 
