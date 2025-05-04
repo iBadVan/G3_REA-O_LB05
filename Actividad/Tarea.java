@@ -25,4 +25,8 @@ public class Tarea {
         this.prioridad = prioridad;
     }
 
+    @Override
+    public String toString() {
+        return "Tarea: " + titulo + " | Prioridad: " + prioridad;
+    }
 }
