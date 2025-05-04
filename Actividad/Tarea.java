@@ -2,7 +2,7 @@ package Actividad;
 
 public class Tarea {
     public String titulo;
-    public Integer prioridad;
+    public Integer prioridad; //numero mas bajo, mayor prioridad
 
     public Tarea(String titulo, int prioridad) {
         this.titulo = titulo;
