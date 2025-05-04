@@ -90,6 +90,17 @@ public class GestorDeTareas <T> {
         return tareaPrioritaria;
     }
     
-
+    public void invertirTareas() {
+        Nodo<T> anterior = null;
+        Nodo<T> actual = cabeza;
+        Nodo<T> siguiente = null;
+        while (actual != null) {
+            siguiente = actual.getSiguienteNodo(); 
+            actual.setSiguienteNodo(anterior); 
+            anterior = actual;  
+            actual = siguiente; 
+        }
+        cabeza = anterior;
+    }
 
 }
