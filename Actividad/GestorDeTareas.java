@@ -12,6 +12,8 @@ public class GestorDeTareas <T> {
         if (cabeza==null){
             cabeza=nodoAAgregar;
         } else {
+
+            //Idea de recorrido (aplicar mas adelante fija)
             Nodo <T> nodoFinal=cabeza;
             while (nodoFinal.getSiguienteNodo()!=null) {
                 nodoFinal=nodoFinal.getSiguienteNodo();                
@@ -20,6 +22,27 @@ public class GestorDeTareas <T> {
         }
     }
 
-    
+    public boolean eliminarTarea(T tarea){
+        if (cabeza==null){
+            return false;
+        }
+
+        if(cabeza.getContenido().equals(tarea)){
+            cabeza=cabeza.getSiguienteNodo();
+            return true;
+        }
+
+        Nodo <T> nodoRecorriendo=cabeza;
+        while (nodoRecorriendo.getSiguienteNodo()!=null) {
+            if (nodoRecorriendo.getSiguienteNodo().getContenido().equals(tarea)){
+                nodoRecorriendo.setSiguienteNodo(nodoRecorriendo.getSiguienteNodo().getSiguienteNodo());
+                return true;
+            }
+            nodoRecorriendo=nodoRecorriendo.getSiguienteNodo();
+        }
+        return false;       
+    }
+
+
 
 }
