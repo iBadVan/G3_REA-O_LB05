@@ -63,6 +63,16 @@ public class GestorDeTareas <T> {
         }
     }
 
+    public int contarTareas() {
+        int cont=0;
+        Nodo<T> nodoRecorriendo = cabeza;
+        while (nodoRecorriendo != null) {
+            cont++; 
+            nodoRecorriendo = nodoRecorriendo.getSiguienteNodo();
+        }
+        return cont;
+    }
+
 
 
 
