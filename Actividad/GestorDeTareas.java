@@ -73,10 +73,23 @@ public class GestorDeTareas <T> {
         return cont;
     }
 
+    public T obtenerTareaMasPrioritaria() {
+        if (cabeza == null){
+            return null; 
+        } 
+
+        Nodo<T> nodoRecorriendo = cabeza;
+        T tareaPrioritaria = cabeza.getContenido();
+        while (nodoRecorriendo != null) {
+            T tareaActual = nodoRecorriendo.getContenido();
+            if (((Tarea)tareaActual).getPrioridad() < ((Tarea)tareaPrioritaria).getPrioridad()) {
+                tareaPrioritaria = tareaActual;
+            }
+            nodoRecorriendo = nodoRecorriendo.getSiguienteNodo();
+        }
+        return tareaPrioritaria;
+    }
     
-
-
-
 
 
 }
