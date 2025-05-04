@@ -44,6 +44,17 @@ public class GestorDeTareas <T> {
         return false;       
     }
 
+    public boolean contieneTarea(T tarea){
+        Nodo <T> nodoRecorriendo=cabeza;
+        while (nodoRecorriendo !=null) {
+            if (nodoRecorriendo.getContenido().equals(tarea)){
+                return true;
+            }
+            nodoRecorriendo=nodoRecorriendo.getSiguienteNodo();
+        }
+        return false;
+    }
+
 
 
 
