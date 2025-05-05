@@ -118,4 +118,22 @@ public class GestorDeTareas <T> {
         return (nodoActual1 == null && nodoActual2 == null);
     }
 
+    public GestorDeTareas<T> concatenarListas(GestorDeTareas<T> otraLista) {
+        GestorDeTareas<T> listaConcatenada = new GestorDeTareas<>();
+
+        Nodo<T> nodoActual = cabeza;
+        while (nodoActual != null) {
+            listaConcatenada.agregarTarea(nodoActual.getContenido());
+            nodoActual = nodoActual.getSiguienteNodo();
+        }
+
+        Nodo<T> nodoActual2 = otraLista.cabeza;
+        while (nodoActual2 != null) {
+            listaConcatenada.agregarTarea(nodoActual2.getContenido());
+            nodoActual2 = nodoActual2.getSiguienteNodo();
+        }
+
+        return listaConcatenada;
+    }
+
 }
