@@ -103,4 +103,19 @@ public class GestorDeTareas <T> {
         cabeza = anterior;
     }
 
+    public boolean sonIguales(GestorDeTareas<T> otraLista) {
+        Nodo<T> nodoActual1 = cabeza;
+        Nodo<T> nodoActual2 = otraLista.cabeza;
+
+        while (nodoActual1 != null && nodoActual2 != null) {
+            if (!nodoActual1.getContenido().equals(nodoActual2.getContenido())) {
+                return false;
+            }
+            nodoActual1 = nodoActual1.getSiguienteNodo();
+            nodoActual2 = nodoActual2.getSiguienteNodo();
+        }
+
+        return (nodoActual1 == null && nodoActual2 == null);
+    }
+
 }
